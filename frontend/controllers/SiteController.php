@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 
+use frontend\models\Template;
 use Yii;
 use yii\base\InvalidParamException;
 use yii\web\BadRequestHttpException;
@@ -12,6 +13,7 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\ContactForm;
+use yii\web\NotFoundHttpException;
 
 /**
  * Site controller
@@ -72,7 +74,23 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        return $this->render('index');
+        $models = \common\models\Template::find()->all();
+
+        return $this->render('index', ['models' => $models]);
+    }
+
+    /**
+     * @param $id
+     * @return string
+     * @throws NotFoundHttpException
+     */
+    public function actionTemplate($id)
+    {
+        $model = Template::findOne($id);
+        if (!$model) {
+            throw new NotFoundHttpException(\Yii::t('app', 'Страница не найдена.'));
+        }
+        return $this->render('template', ['model' => $model]);
     }
 
     /**

@@ -118,3 +118,12 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+.card {
+    display: block;
+    border: 1px solid #ddd;
+    margin: 5px;
+    padding: 5px 10px;
+    height: 71px;
+    overflow-y:hidden;
+}
