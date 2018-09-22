@@ -14,5 +14,14 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
         ],
+        'i18n' => [
+            'translations' => [
+                'app' => [
+                    'class' => \yii\i18n\PhpMessageSource::class,
+                    'basePath' => '@common/messages',
+                    'sourceLanguage' => 'ru-RU',
+                ],
+            ],
+        ],
     ],
 ];

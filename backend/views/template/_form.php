@@ -21,7 +21,7 @@ use yii\widgets\ActiveForm;
         ])
     ?>
 
-    <?= $form->field($model, 'description')->textarea(['rows' => '15']) ?>
+    <?= $form->field($model, 'body')->textarea(['rows' => '15']) ?>
 
     <div class="form-group">
         <?= Html::submitButton(Yii::t('app', 'Сохранить'), ['class' => 'btn btn-success']) ?>

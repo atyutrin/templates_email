@@ -13,6 +13,14 @@ use backend\models\Template;
 class TemplateSearch extends Template
 {
     /**
+     * @inheritdoc
+     */
+    public function behaviors(): array
+    {
+        return [];
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function rules(): array

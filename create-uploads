@@ -1,0 +1,3 @@
+#!/bin/bash
+mkdir -m 755 backend/web/uploads;
+echo "directory for upload files is created.";
