@@ -37,12 +37,12 @@ class FileBehavior extends \common\behaviors\FileBehavior
      */
     public function saveFile(): void
     {
-        $result = file_put_contents(
-            Yii::getAlias('@files/') . $this->owner->file_name . Template::FILE_EXTENSION,
-                    $this->owner->body
-        );
-
-        if (!$result) {
+        try {
+            file_put_contents(
+                Yii::getAlias('@files/') . $this->owner->file_name . Template::FILE_EXTENSION,
+                $this->owner->body
+            );
+        } catch (\Exception $exception) {
             $message = Yii::t('app', 'Не удалось сохранить файл');
             Yii::error([
                 'message' => $message,
