@@ -1,4 +1,24 @@
-<b>Тестовое задание (Yii2)</b>
+Demo:
+
+http://atyutrin.ru
+http://admin.atyutrin.ru
+
+логин: admin;
+пароль: secret
+
+Системные требование: php >= 7.1, MySql, composer, git
+
+Установка:
+- Склонировать проект
+- Выполнить команду: `composer install`
+- Выполнить команду: `php init`
+- Создать базу данных, (например `templates_email`)
+- В файле `common/config/main-local.php` указатать настройки для MySql
+- Выполнить команду `./yii migrate`
+- Создать директорию для загрузки файлов. Выполнить команду `mkdir -m 755 backend/web/uploads` или запустить bash script `create-uploads` (для Linux)
+- Настроить веб сервер https://github.com/yiisoft/yii2-app-advanced/blob/master/docs/guide/start-installation.md 
+
+<b>Описание задания</b>
 1) Спроектировать и написать приложение на Yii2 advanced, позволяющее создать шаблон email-письма - с целью дальнейшей отправки письма пользователям. Механизм отправки и список контактов не нужен.
 На главной странице (frontend без авторизации)
 2) Отобразить список html-шаблонов в виде карточек;
@@ -16,16 +36,3 @@
 13) Если нужно изменить права к файлам или папкам - составить список изменений или создать bash скрипт.
 
 P.S. Плюсом будет заливка тестового проекта на удаленный сервер. Большим плюсом будет использование юнит-тестов и небольшой документации.
-
-<b>Документация</b>
-Системные требование: php >= 7.1, MySql, composer, git
-
-Установка:
-- Склонировать проект
-- Выполнить команду: `composer install`
-- Выполнить команду: `php init`
-- Создать базу данных, (например `templates_email`)
-- В файле `common/config/main-local.php` указатать настройки для MySql
-- Выполнить команду `./yii migrate`
-- Создать директорию для загрузки файлов. Выполнить команду `mkdir -m 755 backend/web/uploads` или запустить bash script `create-uploads` (для Linux)
-- Настроить веб сервер https://github.com/yiisoft/yii2-app-advanced/blob/master/docs/guide/start-installation.md 
